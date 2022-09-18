@@ -30,12 +30,17 @@ const Navbar = () => {
             <p className="nav-link">News</p>
           </Link>
         </div>
-        <div className="btn-github shadow-sm">
-          <div className="git-icon">
-            <img className="w-4" src={GitHubIcon} alt="github" />
+        <a
+          href="https://github.com/aniket-6234/Crypto-Verse-3.0"
+          target="_blank"
+        >
+          <div className="btn-github shadow-sm">
+            <div className="git-icon">
+              <img className="w-4" src={GitHubIcon} alt="github" />
+            </div>
+            <p className="ml-3 mt-0.5">GitHub Repo</p>
           </div>
-          <p className="ml-3 mt-0.5">GitHub Repo</p>
-        </div>
+        </a>
       </nav>
 
       <BottomNavbar />
