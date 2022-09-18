@@ -1,38 +1,760 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  height: 70px;
+  width: 100vw;
+  background-color: #19191b;
+  /* background-color:#1755FF; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav-item {
+  width: 500px;
+  height: 40px;
+  display: flex;
+  padding: 20px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 11px;
+}
+
+.nav-item p {
+  cursor: pointer;
+  color: white;
+}
+.nav-item p:hover {
+  cursor: pointer;
+  color: #13ae7d;
+}
+
+.logo-head, .verse-spell {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 550;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  color: #13ae7d;
+}
+.verse-spell {
+  color: white;
+  font-weight: 550;
+}
+/* #5B58F1 */
+
+.btn-github {
+  width: 140px;
+  height: 38px;
+  background-color: #5B58F1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-size: 11px;
+  color: white;
+  cursor: pointer;
+}
+
+.git-icon {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3a37cd;
+}
+
+.btn-github:hover {
+  background-color: #3a37cd;
+  transition: background-color 0.5s ease
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #6361F3;
+  transform-origin: bottom right;
+  transition: transform 0.35s ease-out;
+}
+
+.nav-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.bottom-nav {
+  height: 100px;
+  background-color: #6361F3;
+}
+
+.creative-developer  {
+  margin-top: 160px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  color: #6060F2;
+}
+
+
+.coin-stats{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(48, 48, 48);
+  font-size: 1rem;
+  opacity: 0.9;
+  padding: 22px 0px 22px 0px;
+  color: white;
+  margin-top: 8px;
+}
+
+.coin-stats-name{
+  display: flex;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.stats{
+  font-weight: 500;
+  margin-left: 20px;
+  color:#1bfbb4;
+}
+
+.coin-desc-link{
+  display: flex;
+  gap: 40px;
+  padding-top: 20px;
+  color: white;
+  flex-wrap: wrap;
+}
+.coin-desc-link p{
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  color: white;
+  width: 93%;
+}
+
+.coin-desc-link h3, .what-is{
+  font-weight: 400;
+  color:#06e48f;
+  font-size: 17px;
+  margin-top: 24px;
+}
+.coin-desc{
+  flex: 0.80;
+}
+.coin-links{
+  flex: 0.5;
+  color: white;
+  font-weight: 300;
+}
+.coin-link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(57, 57, 57);
+  padding: 20px 0px 20px 0px;
+}
+.link-name{
+  text-transform: capitalize;
+  font-size: 0.95rem;
+}
+.coin-link a{
+  color:#e4ac06;
+  font-weight: 300;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+.coin-link:hover, .coin-stats:hover{
+  background-color: rgb(55, 54, 54);
+  cursor: pointer;
+}
+.coin-details-heading {
+  font-weight: 500;
+  color: white;
+  font-size: 18px;
+  margin-top: 0px;
+  color: red;
+
+}
+
+
+.crypto-head {
+  font-size: 52px;
+  font-weight: 500;
+  margin-top: -15px;
+}
+
+#change-text {
+ color: #2A7D83;
+  background-image: linear-gradient(
+    -225deg,
+    #2140f2 10%,
+    #6471fe 29%,
+    #0b30c2 50%,
+    #2d4692 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 65% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+#change-text-2, .change-text-3 {
+  font-size: 72px;
+  /* color: #2A7D83; */
+  font-weight: bold;
+   background-image: linear-gradient(
+     -225deg,
+     #f10de9 10%,
+     #06e48f 29%,
+     #ed07d6 50%,
+     #edfcfd 100%
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 180% auto;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+   margin-top: -10px;
+   margin-bottom: 0px;
+ }
+@keyframes textclip {
+  to {
+    background-position: 200% center;
   }
 }
+.change-text-3 {
+  background-image: linear-gradient(
+    -225deg,
+    #33A9FF 10%,
+    #1FBF75 29%,
+    #776BF8 50%,
+    #edfcfd 100%
+  );
+  font-size: 40px;
+  margin-top: 2px;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.content-container {
+  width: 650px;
+  /* background-color: green; */
+}
+.image-container{
+  width: 650px;
+  /* background-color: green; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.img-crypto {
+  margin-top: 100px;
+}
+
+.discover-head {
+  color: white;
+  font-size:32px;
+  font-weight: 500;
+}
+
+.btn-scroll-down {
+  width: 150px;
+  height: 40px;
+  background-color: #5B58F1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.btn-scroll-down:hover {
+  background-color: #3a37cd;
+  transition: background-color 0.5s ease
+}
+.btn-scroll-down p {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: white;
+  margin-left: 10px;
+}
+.arrow-down {
+  width: 40px;
+  height: 100%;
+  background-color: #3a37cd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#change-text-para {
+  color: #3a37cd;
+}
+
+.mini-dashboard {
+  height: 150px;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+.dash-card {
+  width: 280px;
+  height: 90px;
+  cursor: pointer;
+  padding: 15px 0px 12px 20px;
+  background-color:#199253;
+  border-radius: 2px;
+}
+
+.dash-card-p {
+  margin-bottom: 0px;
+  font-size: 13px;
+  color: black;
+  letter-spacing: 0.5px;
+}
+.dash-card h3 {
+  font-size: 28px;
+  letter-spacing: 1px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dash-card:hover {
+  background-color: #2140f2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dash-card:hover .dash-card-p {
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* Home Style */
+.credit-card-1, .credit-card-2 {
+  width: 380px;
+  height: 235px;
+  background-image: linear-gradient(to right top, #fe7a02, #ff2e3d, #ff0075, #f300ba, #8b00ff);
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+}
+.credit-card-2 { 
+ background-image: linear-gradient(to right top, #1e984d, #528626, #6a7203, #795e00, #804805);
+ background-image: linear-gradient(to right top, #1e984d, #1a8140, #156b33, #0f5527, #0a411c);
+}
+.crypto-card-head {
+  font-size: 18.5px;
+  font-weight: 500;
+  color: white;
+}
+.mastercard {
+  width: 60px;
+  margin-top: -5px;
+}
+.card-para-1, .card-para-2 {
+  color: rgb(125, 122, 122);
+  width: 600px;
+  margin-top: 50px;
+  line-height: 1.7;
+}
+.card-para-2 {
+  color: white;
+}
+.green-tree {
+  width: 700px;
+  margin-top: -30px;
+}
+
+/* Cryto */
+.search-bar {
+  width: 600px;
+  height: 50px;
+  background-color: white;
+  margin-top: 50px;
+  overflow: hidden;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.search-bar img {
+  width: 20px;
+  margin-left: 15px;
+}
+
+.search-input {
+  width: 400px;
+  outline: none;
+  border: none;
+  height: 90%;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  font-size: 14px;
+  margin-right: 20px;
+  padding-left: 0px;
+  background-color: transparent;
+}
+
+.get-btn {
+  width: 110px;
+  height: 70%;
+  background-color:#0b30c2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 0px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.get-btn p {
+  font-size: 14px;
+  color: white;
+  font-weight: 300;
+}
+.get-btn img {
+  width: 20px;
+}
+
+.card-container, .news-container {
+  /* background-color: red; */
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.news-container {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+}
+
+.news-card {
+  width: 380px;
+  /* height: 350px; */
+  border-radius: 2px;
+  background-color: white;
+  padding: 20px;
+  cursor: pointer;
+}
+.news-head {
+  font-size: 16px;
+  width: 200px;
+  font-weight: 400;
+}
+.news-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 2px;
+}
+.news-para {
+  font-size: 12px;
+  margin-top: 15px;
+  color:#4b5563;
+}
+.crypto-image {
+   width: 30px;
+   margin-top: 5px;
+}
+.crypto-card {
+  height: 200px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 2.6px 5.1px 5.1px rgba(46, 45, 45, 0.42);
+}
+.rounded-para, .rounded-div {
+  color: white;
+  background-color: #13ae7d;
+  padding: 5px 10px;
+  width: max-content;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  box-shadow: 7.4px 14.7px 14.7px rgba(59, 56, 56, 0.27);
+}
+.rounded-div {
+  background-color:#2140f2;
+  margin-right: 10px;
+  box-shadow: none;
+
+}
+.tapToSee, .x-number {
+  font-size: 12px;
+  font-weight: 400;
+  margin-right: 10px;
+  color: white;
+}
+.x-number {
+  margin-top:0;
+  font-size: 12.5px;
+  color: #4b5563;
+}
+
+.bottom-div {
+  height: 35px;
+  margin-top:18px;
+  padding: 0px 18px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #228959;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  align-items: center;
+}
+
+.crypto-card:hover .x-number {
+  color: black;
+}
+.crypto-card:hover .rounded-para {
+  background-color: #2140f2;
+  box-shadow: 7.4px 14.7px 14.7px rgba(59, 56, 56, 0.27);
+}
+.crypto-card:hover .rounded-div {
+  background-color: #f82d8f;
+  box-shadow: 7.4px 14.7px 14.7px rgba(59, 56, 56, 0.27);
+}
+.crypto-card:hover .tapToSee {
+  color: white;
+  letter-spacing: 1px;
+}
+.crypto-card:hover .bottom-div {
+  background-color:#0b30c2;
+}
+.crypto-card:hover {
+  background-color: #f0f9f6;
+  box-shadow: 7.4px 14.7px 14.7px rgba(59, 56, 56, 0.27);
+}
+
+/* #058333 */
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px){
+
+  .nav-item {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .btn-github {
+    display: none;
   }
+  .creative-developer {
+    margin-top: 70px;
+    font-size: 12px;
+    color: #13ae7d;
+  }
+  .crypto-head {
+    font-size: 34px;
+    font-weight: 500;
+    margin-top: -10px;
+  }
+  .last-para {
+    font-size: 14px;
+  }
+  
+  .content-container {
+    width: 100vw;
+  }
+  .image-container {
+    width: 100vw;
+    margin-top: 15px;
+  }
+  .img-crypto {
+    margin-top: 0px;
+  }
+  .btn-scroll-down {
+    display: none;
+  }
+
+  .discover-image {
+    width: 100vw;
+    height: 350px;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .discover-content {
+    width: 100vw;;
+    height: 280px;
+    margin-top: 30px;
+  }
+  .discover-head {
+    font-size: 21px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 5px;
+    /* margin-top: 10px; */
+  }
+  #change-text-2 {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  .mini-dashboard {
+    height:180px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .dash-card {
+    width: 45%;
+    height: 65px;
+    border: none;
+    cursor: pointer;
+    padding: 5px 0px 0px 8px;
+    background-color:#1FBF75;
+  }
+ 
+  .dash-card-p {
+    font-size: 12px;
+    color: black;
+  }
+  .dash-card h3 {
+    font-size: 22px;
+  }
+
+  .crypto-card {
+    height: 220px;
+}
+.bottom-div {
+  margin-top: 38px;
+  height: 35px;
+}
+.credit-card-1, .credit-card-2 {
+  width: 100%;
+  height: 235px;
+  margin-top: 40px;
+}
+.crypto-card-head {
+  font-size: 16.5px;
+}
+.change-text-3 {
+  font-size: 28px;
+  margin-top: 1px;
+}
+
+.card-para-1, .card-para-2 {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.green-tree {
+  width: 100vw;
+  margin-top: 15px;
+} 
+.search-bar {
+  width: 100%;
+  height: 45px;
+  margin-top: 30px;
+}
+
+.get-btn {
+  width: 150px;
+  margin-right: 8px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-btn p {
+  display: none;
+}
+.search-input {
+  width: 280px;
+  margin-right: 0px;
+  padding-left: 10px;
+}
+.card-container {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.news-container {
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 10px;
+}
+.news-card {
+  width: 100%;
+}
+.news-head {
+  width: 180px;
+}
+.coin-stats{
+  border-bottom: 1px solid rgb(53, 52, 52);
+  font-size: 0.9rem;
+}
+
+.coin-stats-name{
+  font-size: 0.8rem;
+}
+.stats{
+  font-weight: 500;
+  margin-left: 20px;
+  color:#1bfbb4;
+}
+.coin-desc{
+  width: 350px;
+  flex: initial;
+}
+.coin-desc-link p{
+  width: 100%;
+  font-size: 0.75rem;
+  color: #c3bfbf;
+}
+.coin-desc-link h3, .what-is{
+  font-size: 16px;
+  margin-top: 15px;
+}
+.coin-links{
+  flex: 1;
+  color: white;
+  font-weight: 300;
+}
+.coin-desc-link h3, .what-is{
+  font-weight: 400;
+  color:#06e48f;
+  font-size: 16px;
+}
+
+  
 }
