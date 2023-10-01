@@ -26,7 +26,6 @@ const CryptoDetail = () => {
   const { uuid } = useParams();
   const { data, isFetching } = useGetCryptoDetailsQuery(uuid);
   const cryptoDetails = data?.data?.coin;
-  // console.log("detail : ", cryptoDetails);
   
   if (isFetching) {
    return (

@@ -16,7 +16,6 @@ const Crypto = ({ simplified }) => {
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState(cryptosList?.data?.coins);
   const [searchTerm, setSearchTerm] = useState("");
-  console.log(cryptos);
 
   useEffect(() => {
     const filteredData = cryptosList?.data?.coins.filter((coin) =>
@@ -37,9 +36,9 @@ const Crypto = ({ simplified }) => {
     <div className="px-4 lg:px-24 bg-black overflow-auto">
       {!simplified && (
         <div>
-          <h2 className="text-md lg:text-2xl font-md mt-20 lg:mt-24 text-white">
-            Crypto
-          </h2>
+          <h2 className="text-md lg:text-2xl font-md mt-12 lg:mt-24 text-white page-text">
+          Crypto's
+        </h2>
           <div className="w-full h-[0.5px] mt-2 lg:mt-2 bg-[#6e6c6b]"></div>
         </div>
       )}

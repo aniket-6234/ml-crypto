@@ -2,7 +2,6 @@ import React from "react";
 import { Doughnut } from "react-chartjs-2";
 
 const DoghnutChart = ({ doghnutData }) => {
-  console.log("adhj: ", doghnutData);
   const data = {
     labels: [
       "Binance Coin (BNB)",

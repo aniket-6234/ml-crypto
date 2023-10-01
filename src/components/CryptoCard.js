@@ -4,17 +4,16 @@ import millify from "millify";
 const CryptoCard = ({ crypto }) => {
   return (
     <div className="crypto-card">
-      <div className="flex justify-between items-center px-6 py-3">
+      <div className="px-6 py-2.5 card-bottom">
         <p className="text-sm">{`${crypto.rank}. ${crypto?.name}`}</p>
-        <div className="w-10 h-10 rounded-full">
+        <div className="w-8 h-8 rounded-full">
           <img className="crypto-image" src={crypto.iconUrl} alt="img" />
         </div>
       </div>
-      <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
-      <div className="px-6">
-        <p className="rounded-para">Price: {millify(crypto?.price)}</p>
+      <div className="px-6 mt-4">
+        <p className="rounded-para rounded-price">Price: {millify(crypto?.price)}</p>
       </div>
-      <div className="px-6 mt-5 flex justify-between items-center">
+      <div className="px-6 mt-4 flex justify-between items-center">
         <p className="x-number">{`×××× ×××× ×××× ××${crypto.marketCap.slice(
           2,
           4
