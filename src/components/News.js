@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useGetCryptoNewsQuery } from "../redux/services/cryptoNewsApi";
 import moment from "moment";
 import Loader from "../images/loader.gif";
 import DemoNewsImage from "../images/total-crypto.png";
+import { scrollToTopAfterPageRender } from "../utils/scrollToTop";
 
 const News = ({ simplified }) => {
   const { data: cryptoNews } = useGetCryptoNewsQuery({
     newsCategory: "Cryptocurrency",
     count: simplified ? 6 : 35,
   });
+
+  useEffect(() => {
+    scrollToTopAfterPageRender();
+  }, []);
 
   if (!cryptoNews?.value) {
     return (
@@ -25,7 +30,7 @@ const News = ({ simplified }) => {
           <h2 className="text-md lg:text-2xl font-md mt-20 lg:mt-24 text-white page-text">
             News
           </h2>
-          <div className="w-full h-[0.5px] mt-2 lg:mt-2 bg-[#6e6c6b]"></div>
+          <div className="w-full h-[0.5px] mt-2 lg:mt-2 bg-[#313131]"></div>
         </div>
       )}
       <div className="news-container">
@@ -61,11 +66,15 @@ const News = ({ simplified }) => {
                       alt="icon"
                     />
                   </div>
-                  <p className="text-xs ml-1 mt-2">{news.provider[0]?.name}</p>
+                  <p className="text-xs ml-1 mt-2 text-[#ffffff]">
+                    {news.provider[0]?.name}
+                  </p>
                 </div>
-                <p className="text-xs mt-1 text-blue-700">
-                  {moment(news.datePublished).startOf("ss").fromNow()}
-                </p>
+                <div className="news-time-div">
+                  <p className="news-time-text">
+                    {moment(news.datePublished).format("Do MMMM, YYYY")}
+                  </p>
+                </div>
               </div>
             </a>
           </div>

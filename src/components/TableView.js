@@ -30,41 +30,18 @@ const TableView = ({ header, rowData }) => {
             </div>
             <div className="th-head-data">{data.symbol}</div>
             <div className="th-head-data">{millify(data.price)}</div>
-            <div className="th-head-data">{data.change}</div>
+            <div
+              style={data.change > 0 ? { color: "#199253" } : { color: "red" }}
+              className="th-head-data"
+            >
+              {data.change}
+            </div>
             <div className="th-head-data">{millify(data.marketCap)}</div>
             <div className="th-head-data">{millify(data.btcPrice)}</div>
           </div>
         ))}
       </div>
     </div>
-    // <table className="table">
-    //   <thead>
-    //     <tr className="table-head">
-    //       {header.map((head) => (
-    //         <th className="th-head">{head.Header}</th>
-    //       ))}
-    //     </tr>
-    //   </thead>
-    //   <tbody className="table-body">
-    //     {rowData &&
-    //       rowData.slice(0, 5).map((row, index) => (
-    //         <tr className="table-body-row">
-    //           <td className="th-data">{index + 1}</td>
-    //           <td className="th-data flex">
-    // <div className="dashboard-box-icon">
-    //   <img className="crypto-image" src={row.iconUrl} alt="img" />
-    // </div>
-    //             {row.name}
-    //           </td>
-    //           <td className="th-data">{row.symbol}</td>
-    //           <td className="th-data">{millify(row.price)}</td>
-    //           <td className="th-data">{row.change}</td>
-    //           <td className="th-data">{millify(row.marketCap)}</td>
-    //           <td className="th-data">{millify(row.btcPrice)}</td>
-    //         </tr>
-    //       ))}
-    //   </tbody>
-    // </table>
   );
 };
 

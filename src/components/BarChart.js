@@ -8,13 +8,13 @@ const BarChart = ({ graphData }) => {
       <Line
         data={{
           labels: [
-            "Volume 1",
-            "Volume 2",
-            "Volume 3",
-            "Volume 4",
-            "Volume 5",
-            "Volume 6",
-            "Volume 7",
+            "V 1",
+            "V 2",
+            "V 3",
+            "V 4",
+            "V 5",
+            "V 6",
+            "V 7",
           ],
           datasets: [
             {

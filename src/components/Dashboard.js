@@ -9,6 +9,7 @@ import Loader from "../images/loader.gif";
 import axios from "axios";
 import DoghnutChart from "./DoghnutChart";
 import TableView from "./TableView";
+import { scrollToTopAfterPageRender } from "../utils/scrollToTop";
 
 const columns = [
   { Header: "No.", accessor: "number" },
@@ -32,6 +33,10 @@ const Dashboard = () => {
     grabAndConvertDoughnutData();
   }, [data]);
 
+  useEffect(() => {
+    scrollToTopAfterPageRender();
+  }, []);
+
   const fetchGraphData = async () => {
     try {
       const response = await axios.get(
@@ -49,11 +54,13 @@ const Dashboard = () => {
     }
   };
   const grabAndConvertDoughnutData = () => {
-    const result = [];
-    for (let i = 0; i < 5; i++) {
-      result.push(coinData[i]?.marketCap);
-    }
-    setDoghnutData(result);
+    setTimeout(() => {
+      const result = [];
+      for (let i = 0; i < 5; i++) {
+        result.push(coinData[i]?.marketCap);
+      }
+      setDoghnutData(result);
+    }, 300);
   };
   if (isFetching) {
     return (
@@ -70,7 +77,7 @@ const Dashboard = () => {
         <h2 className="text-md lg:text-2xl font-md mt-12 lg:mt-16 text-white page-text">
           Dashboard
         </h2>
-        <div className="w-full h-[0.5px] mt-2 lg:mt-2 bg-[#6e6c6b]"></div>
+        <div className="w-full h-[0.5px] mt-2 lg:mt-2 bg-[#313131]"></div>
         <div className="dashboard-container">
           <div className="dashboard-left">
             <div className="grid-box-top-left">
@@ -140,7 +147,7 @@ const Dashboard = () => {
             <BarChart graphData={graphData} />
           </div>
         </div>
-        <div>
+        <div className="mobile-container">
           <h2 className="table-head-text">
             Top 5 Coins Performance and their Statistics
           </h2>
@@ -154,20 +161,22 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="pt-16 pb-10 px-4 lg:px-24 bg-black flex justify-between items-center">
+      <div className="pt-4 lg:pt-16 pb-10 px-4 lg:px-24 bg-black flex justify-between items-center">
         <h2 className="globe-head-text">
           Top 8 Trending Crypto Currencies in the world
         </h2>
-        <h3 className="text-[#e3e3ea] cursor-pointer text-sm lg:text-md w-[100px] font-medium hover:text-[#13ae7d]">
+        <h3 className="show-more-text">
           <Link to="/crypto">show more</Link>
         </h3>
       </div>
       <Crypto simplified />
-      <div className="pt-12 pb-10 px-4 lg:px-24 bg-black flex justify-between">
-        <h2 className="globe-head-text">Top 5 Trending Crypto News</h2>
-        <h3 className="text-[#e3e3ea] cursor-pointer text-sm lg:text-md w-[100px] font-medium hover:text-[#13ae7d]">
-          <Link to="/news">show more</Link>
-        </h3>
+      <div className="mobile-container web-container">
+        <div className="pt-0 lg:pt-16 pb-10 px-4 lg:px-24 bg-black flex justify-between items-center">
+          <h2 className="globe-head-text">Top 5 Trending Crypto News</h2>
+          <h3 className="show-more-text">
+            <Link to="/news">show more</Link>
+          </h3>
+        </div>
       </div>
       <News simplified />
     </>

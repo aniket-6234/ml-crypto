@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ArrowDown from "../images/arrow-down.svg";
 import CryptoImage from "../images/crypto-illustration.png";
 import CryptoContent from "../images/crypto-content-img.png";
@@ -7,17 +7,19 @@ import TabOpen from "../images/tab-open.png";
 import GreenTree from "../images/green-tree.png";
 import MastercardIcon from "../images/mastercard.png";
 import MotionArt from "../images/motionArt.png";
+import { scrollToTopAfterPageRender } from "../utils/scrollToTop";
 
 const Home = () => {
   const scrollBottomRef = useRef(null);
-  const [changeColor, setChangeColor] = useState(false);
+  useEffect(() => {
+    scrollToTopAfterPageRender();
+  }, []);
 
-  const changeTextColor = () => {
-    setChangeColor((prev) => !prev);
-  };
-
-  const scrollToBlue = () => {
-    scrollBottomRef.current.scrollIntoView();
+  const scrollDownPage = () => {
+    window.scrollBy({
+      top: 650,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -38,7 +40,7 @@ const Home = () => {
             our future transactions where everything is going to be replace by{" "}
             <span id="change-text-para">crypto</span>.
           </p>
-          <div onClick={scrollToBlue} className="btn-scroll-down">
+          <div onClick={scrollDownPage} className="btn-scroll-down">
             <p>Scroll Down</p>
             <div className="arrow-down">
               <img className="w-4" src={ArrowDown} alt="arrow-down" />
@@ -76,7 +78,7 @@ const Home = () => {
         <img className="" src={CardGif} alt="card-gif" />
       </div>
 
-      <div className="px-4 py-14 lg:px-24 lg:py-40 bg-[#000000] flex flex-wrap flex-col-reverse lg:flex-row lg:justify-between">
+      <div className="px-4 py-20 lg:px-24 lg:py-48 bg-[#000000] flex flex-wrap flex-col-reverse lg:flex-row lg:justify-between">
         <div className="motion-art-div">
           <div>
             <img src={MotionArt} alt="" />
@@ -96,14 +98,14 @@ const Home = () => {
           <h1 className="change-text-3">How to get to us _</h1>
         </div>
       </div>
-      <div className="bg-[#058333] px-4 py-12 lg:px-24 lg:py-32 ">
+      <div className="bg-[#3a37cd] px-4 py-12 lg:px-24 lg:py-32 ">
         <div className="flex flex-wrap justify-between">
           <div className="green-1">
             <h1 className="text-white font-medium lg:font-semibold lg:leading-snug text-2xl lg:text-5xl w-[350px] lg:w-[550px]">
               Get & Collect all your money from Friends, Family, Store on Every
               Transactions.
             </h1>
-            <p className="mt-6 lg:mt-15 font-medium lg:leading-normal text-black text-sm w-[350px] lg:text-xl lg:w-[500px] green-text">
+            <p className="mt-6 lg:mt-15 font-normal lg:leading-normal text-white text-sm w-[350px] lg:text-lg lg:w-[550px] green-text">
               Crypto Verse is for all the Users and this is the emerging trend
               that can be changed the transaction history of the World.
             </p>

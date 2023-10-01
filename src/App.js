@@ -11,17 +11,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/crypto" element={<Crypto />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/cryptoDetail/:uuid" element={<CryptoDetail />} />
-      </Routes>
-      {/* <Footer /> */}
-    </Router>
+    <div style={{ width: "100vw" }} className="bg-[#000]">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/crypto" element={<Crypto />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/cryptoDetail/:uuid" element={<CryptoDetail />} />
+        </Routes>
+        {/* <Footer /> */}
+      </Router>
+    </div>
   );
 }
 

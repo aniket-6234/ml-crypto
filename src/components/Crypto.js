@@ -10,6 +10,7 @@ import {
   useGetCryptosQuery,
 } from "../redux/services/cryptoApi";
 import CryptoCard from "./CryptoCard";
+import { scrollToTopAfterPageRender } from "../utils/scrollToTop";
 
 const Crypto = ({ simplified }) => {
   const count = simplified ? 8 : 100;
@@ -22,6 +23,7 @@ const Crypto = ({ simplified }) => {
       coin.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setCryptos(filteredData);
+    scrollToTopAfterPageRender();
   }, [cryptosList, searchTerm]);
 
   if (isFetching) {
@@ -36,16 +38,23 @@ const Crypto = ({ simplified }) => {
     <div className="px-4 lg:px-24 bg-black overflow-auto">
       {!simplified && (
         <div>
-          <h2 className="text-md lg:text-2xl font-md mt-12 lg:mt-24 text-white page-text">
-          Crypto's
-        </h2>
-          <div className="w-full h-[0.5px] mt-2 lg:mt-2 bg-[#6e6c6b]"></div>
+          <h2 className="text-md lg:text-2xl font-md mt-20 lg:mt-24 text-white page-text">
+            Crypto's
+          </h2>
+          <div className="w-full h-[0.5px] mt-2 lg:mt-2 bg-[#313131]"></div>
         </div>
       )}
 
       {!simplified && (
         <div className="search-bar">
-          <img src={SearchIcon} alt="icon" />
+          <div className="w-8 h-8 lg:w-6 lg:h-6 ml-3 mt-3 lg:mt-0 ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168Z"
+                fill="rgba(67,67,67,1)"
+              ></path>
+            </svg>
+          </div>
           <input
             className="search-input"
             type="text"
