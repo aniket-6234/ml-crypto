@@ -6,6 +6,7 @@ import CardGif from "../images/card-gif.gif";
 import TabOpen from "../images/tab-open.png";
 import GreenTree from "../images/green-tree.png";
 import MastercardIcon from "../images/mastercard.png";
+import MotionArt from "../images/motionArt.png";
 
 const Home = () => {
   const scrollBottomRef = useRef(null);
@@ -31,10 +32,10 @@ const Home = () => {
           <h3 className="crypto-head">
             <span id="change-text">changing</span> you.
           </h3>
-          <p className="mt-4 lg:w-[600px] last-para">
+          <p className="mt-7 lg:w-[600px] last-para">
             We need to explore the{" "}
-            <span id="change-text-para">cryptocurrency</span> because it is our
-            future transactions where everything is going to replace by{" "}
+            <span id="change-text-para">crypto currencies</span> because it is
+            our future transactions where everything is going to be replace by{" "}
             <span id="change-text-para">crypto</span>.
           </p>
           <div onClick={scrollToBlue} className="btn-scroll-down">
@@ -75,79 +76,44 @@ const Home = () => {
         <img className="" src={CardGif} alt="card-gif" />
       </div>
 
-      <div className="px-4 py-14 lg:px-24 lg:py-32 bg-[#1e1e20] flex flex-wrap flex-col-reverse lg:flex-row lg:justify-between">
-        <div className="">
-          <div
-            onClick={changeTextColor}
-            className={changeColor ? `credit-card-2` : `credit-card-1`}
-          >
-            <div className="flex justify-between">
-              <h1 className="crypto-card-head">Crypto Credit Card</h1>
-              <div className="">
-                <img
-                  className="mastercard"
-                  src={MastercardIcon}
-                  alt="mastercard"
-                />
-              </div>
-            </div>
-
-            <div className="flex justify-center w-fit px-3 py-3 items-center text-xs mt-2 lg:mt-4 bg-white/50 cursor-pointer">
-              \\\\\\\\\\\
-            </div>
-            <p className="mt-6 lg:mt-7 text-white tracking-wider">
-              8756 9012 0086 4374
-            </p>
-            <p className="text-black w-[100%] text-xs mt-3 lg:mt-4 font-light">
-              The New Indian Exchanges Market need this New Credit Card for
-              Secure Transactions.{" "}
-            </p>
+      <div className="px-4 py-14 lg:px-24 lg:py-40 bg-[#000000] flex flex-wrap flex-col-reverse lg:flex-row lg:justify-between">
+        <div className="motion-art-div">
+          <div>
+            <img src={MotionArt} alt="" />
           </div>
-          <h3
-            className={
-              changeColor
-                ? `text-[#36bc7e] font-thin mt-8 lg:mt-8 text-xs lg:text-base`
-                : `text-white font-thin mt-8 lg:mt-8 text-xs lg:text-base`
-            }
-          >
-            Try to Click on this above card
-          </h3>
-          <h1 className="change-text-3">and See the Magic.</h1>
         </div>
-        <div className="">
-          <h3
-            className={
-              changeColor
-                ? `text-[#36bc7e] text-2xl lg:text-5xl lg:leading-snug lg:font-semibold font-medium w-[300px] lg:w-[480px]`
-                : `text-white text-2xl lg:text-5xl lg:leading-snug font-medium w-[300px] lg:w-[480px]`
-            }
-          >
-            Trade, invest, and Send your money on crypto currency
+        <div className="motion-art-content">
+          <h3 className="moscow-text">
+            Moscow, Presnenskya embankment, 10 bld 2 (IQ Apartment Tower, floor
+            12)
           </h3>
-          <p className={changeColor ? `card-para-2` : `card-para-1`}>
-            Solution for all people that want to use crypto currency for trade,
-            invest, transaction, etc. Track & trade your coin portfolio now.
+          <p className="contact-info mt-8">(+91) 845-927-169</p>
+          <p className="contact-info">aniket.raikwar.101@gmail.com</p>
+          <p className={`card-para-1`}>
+            Solution for all people who want to use crypto currency for trade,
+            invest, transaction, etc. (Track & trade your coin portfolio now).
           </p>
+          <h1 className="change-text-3">How to get to us _</h1>
         </div>
       </div>
       <div className="bg-[#058333] px-4 py-12 lg:px-24 lg:py-32 ">
         <div className="flex flex-wrap justify-between">
-          <div className="">
+          <div className="green-1">
             <h1 className="text-white font-medium lg:font-semibold lg:leading-snug text-2xl lg:text-5xl w-[350px] lg:w-[550px]">
               Get & Collect all your money from Friends, Family, Store on Every
               Transactions.
             </h1>
-            <p className="mt-6 lg:mt-20 font-medium lg:leading-normal text-black text-sm w-[350px] lg:text-xl lg:w-[550px]">
+            <p className="mt-6 lg:mt-15 font-medium lg:leading-normal text-black text-sm w-[350px] lg:text-xl lg:w-[500px] green-text">
               Crypto Verse is for all the Users and this is the emerging trend
               that can be changed the transaction history of the World.
             </p>
           </div>
-          <div className="">
+          <div className="green-1">
             <img className="green-tree" src={GreenTree} alt="img" />
           </div>
         </div>
         <div>
-          <p className="text-white text-sm lg:text-base font-thin lg:mt-0 mt-4">
+          <p className="text-white text-sm lg:text-base font-thin lg:mt-0 mt-4 green-text">
             creator: Aniket A. Raikwar
           </p>
           <p className="text-white text-sm lg:text-base font-thin lg:mb-0 mb-8">

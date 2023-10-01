@@ -31,10 +31,10 @@ const Crypto = ({ simplified }) => {
         <img className="w-[80px]" src={Loader} alt="loader" />
       </div>
     );
-  };
+  }
 
   return (
-    <div className="px-4 lg:px-36 bg-black overflow-auto">
+    <div className="px-4 lg:px-24 bg-black overflow-auto">
       {!simplified && (
         <div>
           <h2 className="text-md lg:text-2xl font-md mt-20 lg:mt-24 text-white">
