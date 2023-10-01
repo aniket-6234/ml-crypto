@@ -161,7 +161,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="pt-4 lg:pt-16 pb-10 px-4 lg:px-24 bg-black flex justify-between items-center">
+      <div className="dash-head-container">
         <h2 className="globe-head-text">
           Top 8 Trending Crypto Currencies in the world
         </h2>
@@ -171,7 +171,7 @@ const Dashboard = () => {
       </div>
       <Crypto simplified />
       <div className="mobile-container web-container">
-        <div className="pt-0 lg:pt-16 pb-10 px-4 lg:px-24 bg-black flex justify-between items-center">
+        <div className="dash-head-container">
           <h2 className="globe-head-text">Top 5 Trending Crypto News</h2>
           <h3 className="show-more-text">
             <Link to="/news">show more</Link>

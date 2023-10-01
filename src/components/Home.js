@@ -65,7 +65,7 @@ const Home = () => {
 
       <div
         ref={scrollBottomRef}
-        className="px-4 py-12 lg:px-24 lg:py-20 bg-[#1755FF] flex flex-wrap justify-between"
+        className="px-4 py-16 lg:px-24 lg:py-20 bg-[#1755FF] flex flex-wrap justify-between"
       >
         <div>
           <h2 className="discover-head">Open new tabs is sh*t</h2>
@@ -98,7 +98,7 @@ const Home = () => {
           <h1 className="change-text-3">How to get to us _</h1>
         </div>
       </div>
-      <div className="bg-[#3a37cd] px-4 py-12 lg:px-24 lg:py-32 ">
+      <div className="bg-[#3a37cd] px-4 py-16 lg:px-24 lg:py-32 ">
         <div className="flex flex-wrap justify-between">
           <div className="green-1">
             <h1 className="text-white font-medium lg:font-semibold lg:leading-snug text-2xl lg:text-5xl w-[350px] lg:w-[550px]">

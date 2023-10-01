@@ -143,19 +143,18 @@
   width: 150px;
   height: 30px;
   border-radius: 25px;
-  border: 0.5px solid rgb(71, 70, 70);
+  border: 0.5px solid #6c67f9;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #222222;
+  background-color: #3936f3;
 }
 .news-time-text {
   font-size: 12px;
-  color: #5b58f1;
+  color: #f2f2f5;
 }
 .news-card:hover .news-time-div {
   background-color: #3936f3;
-  border: 0.5px solid #6c67f9;
 }
 .news-card:hover .news-time-text {
   color: #f2f2f5;
@@ -535,6 +534,9 @@
   padding: 30px;
   border: 0.6px solid #464646;
   cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
   background-color: #131313;
 }
 .grid-box-top-left:hover,
@@ -571,6 +573,13 @@
   width: 25px;
   height: 25px;
 }
+.dash-head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 50px 100px;
+}
 #value {
   color: #fff;
   font-size: 28px;
@@ -578,7 +587,7 @@
   margin-top: 5px;
 }
 .daily-growth {
-  margin-top: 20px;
+  margin-top: 30px;
   width: 45px;
   height: 24px;
   font-size: 11.5px;
@@ -752,12 +761,6 @@
   flex-direction: column;
 }
 
-.news-card:hover {
-  background-color: #212121;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-
 .news-head {
   font-size: 16px;
   font-family: "IBM Plex Sans", sans-serif;
@@ -784,19 +787,28 @@
 .news-card {
   height: 250px;
   border-radius: 15px;
-  background-color: rgb(21, 21, 21);
+  background-color: rgb(31, 31, 31);
   border: 0.5px solid rgb(67, 67, 67);
   padding: 20px;
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+.news-card:hover {
+  background-color: #313131;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
 .card-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.4px solid rgb(44, 45, 45);
   margin-bottom: 2px;
+}
+.crypto-card:hover .card-bottom {
+  border-bottom: 0.4px solid #646680;
 }
 .rounded-para,
 .rounded-div,
@@ -820,10 +832,12 @@
   height: 30px;
   padding: 0px;
   border-radius: 25px;
+  border: 0.5px solid #7775fd;
   font-weight: 400;
+  background-color: #3f3cfa;
 }
 .rounded-div {
-  background-color: #5b58f1;
+  background-color: #f82d8f;
   margin-right: 10px;
   box-shadow: none;
 }
@@ -832,7 +846,7 @@
   font-size: 12px;
   font-weight: 400;
   margin-right: 10px;
-  color: rgb(148, 146, 146);
+  color: rgb(247, 244, 244);
 }
 .x-number {
   margin-top: 0;
@@ -846,7 +860,7 @@
   padding: 0px 18px;
   display: flex;
   justify-content: flex-end;
-  background-color: #242424;
+  background-color: #3f3cfa;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   align-items: center;
@@ -862,7 +876,7 @@
   box-shadow: 7.4px 14.7px 14.7px rgba(59, 56, 56, 0.27);
 }
 .crypto-card:hover .rounded-div {
-  background-color: #f82d8f;
+  background-color: #4946f1;
   box-shadow: 7.4px 14.7px 14.7px rgba(59, 56, 56, 0.27);
 }
 .crypto-card:hover .tapToSee {
@@ -870,13 +884,16 @@
   letter-spacing: 1px;
 }
 .crypto-card:hover .bottom-div {
-  background-color: #3f3cfa;
+  background-color: transparent;
+  border-top: 0.5px solid #646680;
 }
 .crypto-card:hover .rounded-price {
-  border: 0.5px solid #7775fd;
+  border: 0.5px solid #747692;
+  background-color: #303246;
 }
 .crypto-card:hover {
   background-color: rgb(17, 17, 17);
+  border: 0.5px solid #646680;
   box-shadow: 7.4px 14.7px 14.7px rgba(59, 56, 56, 0.27);
 }
 .bottom-nav-container {
@@ -887,11 +904,11 @@
 .btm-nav-text {
   font-size: 11px;
   margin-top: 1px;
-  color: #a7aac4;
+  color: #bfc2db;
 }
 
 .btm-nav-text {
-  color: #3f4151;
+  color: #646680;
 }
 .web-container {
   margin-top: -60px;
@@ -911,7 +928,7 @@
   }
   .crypto-head {
     font-size: 34px;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: -10px;
   }
   .last-para {
@@ -1136,11 +1153,20 @@
   }
   .globe-head-text {
     width: 80%;
+    font-size: 14px;
   }
   .mobile-container {
     margin-top: -25px;
   }
   .show-more-text {
+    margin-top: 30px;
     font-size: 10px;
+  }
+  .navbar {
+    height: 55px;
+  }
+  .dash-head-container {
+    height: 80px;
+    padding: 20px 20px;
   }
 }

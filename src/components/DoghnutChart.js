@@ -12,7 +12,7 @@ const DoghnutChart = ({ doghnutData }) => {
     ],
     datasets: [
       {
-        label: "Polar Chart Data",
+        label: "Market Cap Statistics",
         data: doghnutData,
         borderColor: "#000000",
         borderWidth: 0.2,
@@ -37,7 +37,7 @@ const DoghnutChart = ({ doghnutData }) => {
       },
       title: {
         display: true,
-        text: "Polar Area Chart",
+        text: "BTC Statistics Data [Market Cap]",
       },
     },
   };
