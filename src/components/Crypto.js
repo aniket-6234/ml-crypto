@@ -37,7 +37,7 @@ const Crypto = ({ simplified }) => {
 
   return (
     <div
-      style={{ height: "100vh" }}
+      style={ simplified ? {} : { height: "100vh" }}
       className="px-4 lg:px-24 bg-black overflow-auto"
     >
       {!simplified && (
