@@ -10,7 +10,6 @@ import MotionArt from "../images/motionArt.png";
 import { scrollToTopAfterPageRender } from "../utils/scrollToTop";
 
 const Home = () => {
-  const scrollBottomRef = useRef(null);
   useEffect(() => {
     scrollToTopAfterPageRender();
   }, []);
@@ -63,10 +62,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div
-        ref={scrollBottomRef}
-        className="px-4 py-16 lg:px-24 lg:py-20 bg-[#1755FF] flex flex-wrap justify-between"
-      >
+      <div className="px-4 py-16 lg:px-24 lg:py-20 bg-[#1755FF] flex flex-wrap justify-between">
         <div>
           <h2 className="discover-head">Open new tabs is sh*t</h2>
           <img className="mt-8" src={TabOpen} alt="tab-open" />
@@ -95,7 +91,13 @@ const Home = () => {
             Solution for all people who want to use crypto currency for trade,
             invest, transaction, etc. (Track & trade your coin portfolio now).
           </p>
-          <h1 className="change-text-3">How to get to us _</h1>
+          <a
+            href="https://www.linkedin.com/in/aniketraikwar/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h1 className="change-text-3">How to get to us _</h1>
+          </a>
         </div>
       </div>
       <div className="bg-[#3a37cd] px-4 py-16 lg:px-24 lg:py-32 ">

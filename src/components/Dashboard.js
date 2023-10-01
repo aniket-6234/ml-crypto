@@ -34,7 +34,9 @@ const Dashboard = () => {
   }, [data]);
 
   useEffect(() => {
-    scrollToTopAfterPageRender();
+    setTimeout(() => {
+      scrollToTopAfterPageRender();
+    }, 400);
   }, []);
 
   const fetchGraphData = async () => {

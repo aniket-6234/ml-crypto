@@ -61,6 +61,10 @@
   cursor: pointer;
   color: #13ae7d;
 }
+.search-icon {
+  width: 22px;
+  margin-left: 15px;
+}
 
 .logo-head,
 .verse-spell {
@@ -699,11 +703,6 @@
   margin-bottom: 40px;
   border: 0.5px solid rgb(49, 49, 49);
 }
-.search-bar img {
-  width: 20px;
-  margin-left: 15px;
-}
-
 .search-input {
   width: 400px;
   outline: none;
@@ -783,6 +782,13 @@
   border-radius: 10px;
   border: 0.5px solid rgb(49, 49, 49);
   box-shadow: 2.6px 5.1px 5.1px rgba(46, 45, 45, 0.42);
+}
+.no-data-text {
+  font-size: 38px;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+  margin-top: 20px;
+  color: rgb(120, 129, 142);
 }
 .news-card {
   height: 250px;
@@ -913,6 +919,13 @@
 .web-container {
   margin-top: -60px;
 }
+.no-data-found {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 @media screen and (max-width: 480px) and (max-width: 767px) {
   .nav-item {
@@ -946,9 +959,7 @@
   .img-crypto {
     margin-top: 0px;
   }
-  .btn-scroll-down {
-    display: none;
-  }
+
 
   .discover-image {
     width: 100vw;
@@ -1034,9 +1045,11 @@
     height: 45px;
     margin-top: 30px;
   }
-
+  .search-icon {
+    width: 25px;
+  }
   .get-btn {
-    width: 150px;
+    width: 100px;
     margin-right: 8px;
     padding: 2px;
     display: flex;
@@ -1120,7 +1133,7 @@
   .dashboard-container,
   .dashboard-container-2 {
     width: 100%;
-    height: 870px;
+    height: 915px;
     margin-top: 15px;
     justify-content: flex-start;
     align-items: start;
@@ -1149,18 +1162,17 @@
   .table-head-text,
   .globe-head-text {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .globe-head-text {
-    width: 80%;
-    font-size: 14px;
+    width: 75%;
   }
   .mobile-container {
     margin-top: -25px;
   }
   .show-more-text {
     margin-top: 30px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .navbar {
     height: 55px;
@@ -1168,5 +1180,14 @@
   .dash-head-container {
     height: 80px;
     padding: 20px 20px;
+  }
+  .no-data-found {
+    width: 100%;
+  }
+  .no-data-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(120, 129, 142);
   }
 }
