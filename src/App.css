@@ -20,7 +20,7 @@
 }
 .moscow-text {
   color: #fff;
-  font-size: 25px;
+  font-size: 27px;
   letter-spacing: 0.5px;
 }
 .contact-info {
@@ -151,14 +151,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3936f3;
+  background-color: #462fc1;
 }
 .news-time-text {
   font-size: 12px;
   color: #f2f2f5;
 }
 .news-card:hover .news-time-div {
-  background-color: #3936f3;
+  background-color: #3a24b6;
 }
 .news-card:hover .news-time-text {
   color: #f2f2f5;
@@ -324,7 +324,7 @@
     #eb9117 50%,
     #ca1a55 100%
   );
-  font-size: 24px;
+  font-size: 32px;
   margin-top: 15px;
   cursor: pointer;
   border-bottom: 1px solid #535553;
@@ -721,7 +721,7 @@
 .get-btn {
   width: 110px;
   height: 70%;
-  background-color: #3f3cfa;
+  background-color: #4f37d7;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -778,7 +778,7 @@
 .crypto-card {
   height: 180px;
   cursor: pointer;
-  background-color: rgb(21, 21, 21);
+  background-color: rgb(24, 24, 24);
   border-radius: 10px;
   border: 0.5px solid rgb(49, 49, 49);
   box-shadow: 2.6px 5.1px 5.1px rgba(46, 45, 45, 0.42);
@@ -814,7 +814,7 @@
   margin-bottom: 2px;
 }
 .crypto-card:hover .card-bottom {
-  border-bottom: 0.4px solid #646680;
+  border-bottom: 0.4px solid #4a4b65;
 }
 .rounded-para,
 .rounded-div,
@@ -840,7 +840,7 @@
   border-radius: 25px;
   border: 0.5px solid #7775fd;
   font-weight: 400;
-  background-color: #3f3cfa;
+  background-color: #462fc1;
 }
 .rounded-div {
   background-color: #f82d8f;
@@ -857,7 +857,7 @@
 .x-number {
   margin-top: 0;
   font-size: 12.5px;
-  color: #4b5563;
+  color: #97a0ae;
 }
 
 .bottom-div {
@@ -866,7 +866,7 @@
   padding: 0px 18px;
   display: flex;
   justify-content: flex-end;
-  background-color: #3f3cfa;
+  background-color: #303031;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   align-items: center;
@@ -874,7 +874,7 @@
 }
 
 .crypto-card:hover .x-number {
-  color: rgb(176, 175, 175);
+  color: rgb(226, 224, 224);
 }
 .crypto-card:hover .rounded-para {
   background-color: #3f3cfa;
@@ -890,16 +890,16 @@
   letter-spacing: 1px;
 }
 .crypto-card:hover .bottom-div {
-  background-color: transparent;
-  border-top: 0.5px solid #646680;
+  background-color: #303031;
+  border: 0.5px solid #53546b;
 }
 .crypto-card:hover .rounded-price {
-  border: 0.5px solid #747692;
+  border: 0.5px solid #53546b;
   background-color: #303246;
 }
 .crypto-card:hover {
   background-color: rgb(17, 17, 17);
-  border: 0.5px solid #646680;
+  border: 0.5px solid #434357;
   box-shadow: 7.4px 14.7px 14.7px rgba(59, 56, 56, 0.27);
 }
 .bottom-nav-container {
@@ -959,7 +959,6 @@
   .img-crypto {
     margin-top: 0px;
   }
-
 
   .discover-image {
     width: 100vw;
@@ -1189,5 +1188,8 @@
     font-size: 18px;
     font-weight: 400;
     color: rgb(120, 129, 142);
+  }
+  .moscow-text {
+    font-size: 24px;
   }
 }

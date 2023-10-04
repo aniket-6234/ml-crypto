@@ -36,13 +36,13 @@ const Dashboard = () => {
   useEffect(() => {
     setTimeout(() => {
       scrollToTopAfterPageRender();
-    }, 400);
+    }, 700);
   }, []);
 
   const fetchGraphData = async () => {
     try {
       const response = await axios.get(
-        "https://min-api.cryptocompare.com/data/exchange/histoday?tsym=USD&limit=10&api_key=5f8394d1f03348f7cac9fa074c254be40fb6c3803cb777ea2101c0d3b415497c"
+        `https://min-api.cryptocompare.com/data/exchange/histoday?tsym=USD&limit=10&api_key=${process.env.REACT_APP_GRAPH_API_KEY}`
       );
       const graphResp = response?.data?.Data;
       const array = [];
