@@ -1,6 +1,6 @@
 # Crypto Verse ✨
 
-#### Welcome to Crypto Verse, your gateway to the fascinating world of cryptocurrencies and blockchain technology. Whether you're a seasoned crypto enthusiast or just starting your journey, Crypto Verse has something for everyone.
+##### Welcome to Crypto Verse, your gateway to the fascinating world of cryptocurrencies and blockchain technology. Whether you're a seasoned crypto enthusiast or just starting your journey, Crypto Verse has something for everyone.
 
 
 #### Live App Link: https://crypto-verse-ar.netlify.app/
