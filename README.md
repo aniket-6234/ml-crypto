@@ -2,10 +2,13 @@
 
 #### Welcome to Crypto Verse, your gateway to the fascinating world of cryptocurrencies and blockchain technology. Whether you're a seasoned crypto enthusiast or just starting your journey, Crypto Verse has something for everyone.
 
+
 #### Live App Link: https://crypto-verse-ar.netlify.app/
+
 
 ### About Crypto Verse
 It is a Web Application that are built on React and Tailwind CSS, where I mostly focus on UI of the APP, this APP provides the information related to crypto currencies which are mostly used nowadays, it track the Top Trending Crypto Coins and get the information related to that coins with the HELP of API. It has also a NEWS section, which shows the trending news related to crypto coins. User can access all the information data related to specific crypto coin by simply clicking on them.
+
 
 ### Crpto Verse UI Glimpse
 <img width="1438" alt="Screenshot 2023-10-04 at 12 40 38 PM" src="https://github.com/aniket-6234/Crypto-Verse-3.0/assets/65860069/5af83325-7235-40ea-b16a-34412d155b80">
@@ -15,7 +18,7 @@ It is a Web Application that are built on React and Tailwind CSS, where I mostly
 <img width="1440" alt="Screenshot 2023-10-04 at 12 41 15 PM" src="https://github.com/aniket-6234/Crypto-Verse-3.0/assets/65860069/34279093-a4d0-48a0-9fd0-5a149854827c">
 <img width="1439" alt="Screenshot 2023-10-04 at 12 41 40 PM" src="https://github.com/aniket-6234/Crypto-Verse-3.0/assets/65860069/e6ad3650-ddca-49de-80ef-f5cb3e55d385">
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
