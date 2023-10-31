@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import CryptoLogo from "../images/crypto-icon.svg";
-import GitHubIcon from "../images/github.svg";
+import BarChart from "../images/bar-chart-horizontal-line.png";
 import BottomNavbar from "./BottomNavbar";
 
 const navbarData = [
-  {
-    id: 1,
-    title: "Home",
-    slug: "/",
-    is_selected: true,
-  },
   {
     id: 2,
     title: "Dashboard",
@@ -58,7 +52,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="z-40 navbar shadow-sm px-4 lg:px-24">
-        <Link to="/">
+        <Link to="/dashboard">
           <div className="flex items-center cursor-pointer">
             <div className="w-6">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -69,7 +63,7 @@ const Navbar = () => {
               </svg>
             </div>
             <h2 className="ml-2 logo-head">
-              Crypto <span className="verse-spell">Verse</span>
+              Crypto <span className="verse-spell">Prediction</span>
             </h2>
           </div>
         </Link>
@@ -86,17 +80,14 @@ const Navbar = () => {
           ))}
         </div>
         <div>
-          <a
-            href="https://github.com/aniket-6234/Crypto-Verse-3.0"
-            target="_blank"
-          >
+          <Link to="/crypto-prediction">
             <div className="btn-github shadow-sm">
               <div className="git-icon">
-                <img className="w-4" src={GitHubIcon} alt="github" />
+                <img className="w-4" src={BarChart} alt="ml" />
               </div>
-              <p className="ml-2">GitHub Repo</p>
+              <p className="ml-2">Prediction</p>
             </div>
-          </a>
+          </Link>
         </div>
       </nav>
 

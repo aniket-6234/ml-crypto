@@ -146,7 +146,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="dashboard-right">
-            <BarChart graphData={graphData} />
+            <BarChart graphData={[]} />
           </div>
         </div>
         <div className="mobile-container">

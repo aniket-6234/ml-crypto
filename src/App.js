@@ -1,13 +1,12 @@
 import React from "react";
 import "./App.css";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
 import News from "./components/News";
-import Footer from "./components/Footer";
 import Crypto from "./components/Crypto";
 import CryptoDetail from "./components/CryptoDetail";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Prediction from "./machineLearning/Prediction";
 
 function App() {
   return (
@@ -15,11 +14,11 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/crypto" element={<Crypto />} />
           <Route path="/news" element={<News />} />
           <Route path="/cryptoDetail/:uuid" element={<CryptoDetail />} />
+          <Route path="/crypto-prediction" element={<Prediction />} />
         </Routes>
         {/* <Footer /> */}
       </Router>
